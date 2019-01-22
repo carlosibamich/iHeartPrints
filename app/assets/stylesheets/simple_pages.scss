@@ -1,3 +1,214 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ***************** Global Styles ******************
+* { 
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: .2em !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(249,249,249);
+  background-color: rgb(130, 159, 163);
+}
+.container-fluid{ 
+  margin: 0 !important;
+	padding: 0 !important; 
+}
+.row {
+  max-width: 100%;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+
+// ***** Navigation Bar (global) ******
+.navbar-brand {
+  margin-left: 16px;
+  font-size: 26px;
+}
+#nav-brand {
+  color: rgb(140,140,140);
+}
+nav ul {
+  padding-right: 30px;
+  margin-top: 4px;
+}
+.nav-item .nav-link {
+  padding-top: 0;
+  padding-left: 1.3em !important;
+  font-size: 23px;
+  font-weight: 500;
+	transition: color 300ms;
+	-webkit-transition: color 300ms;
+}
+.nav-item .nav-link:hover {
+  color: rgb(252, 135, 108) !important;
+}
+.navbar-light .navbar-toggler {
+	outline: none;
+}
+.navbar-nav {
+  padding-right: .2em;
+}
+#navbarSupportedContent {
+  padding-right: .2em;
+	margin-top: 1.3em;
+	margin-bottom: 1.1em;
+	text-align: right;
+	line-height: 1.2em;
+}
+.navbar {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  background-color: rgb(246,246,246) !important;
+  border-top: 5px solid rgb(140,140,140);
+  -webkit-box-shadow: 0 3px 12px rgba(0,0,0,.16);
+   	 -moz-box-shadow: 0 3px 12px rgba(0,0,0,.16);
+     	 -o-box-shadow: 0 3px 12px rgba(0,0,0,.16);
+					box-shadow: 0 3px 12px rgba(0,0,0,.16);
+}
+
+// ******** Main Content global) *********
+.main-box {
+  margin-top: 86px;
+}
+.art {
+  color: rgb(255, 180, 160);
+}
+.art-strip {
+  margin-bottom: 120px;
+}
+
+// ********** Footer (global) ***********
+.site-footer {
+  height: 73px;
+  margin-top: 3em;
+  font-size: 22px; 
+  font-weight: 400;
+  letter-spacing: .04em;
+  border-top: 8px solid rgb(230,230,230);
+  background-color: rgb(105,107,105);
+}
+.site-footer p {
+  display: block;
+  margin-top: 16px;
+  margin-left: 24px;
+  font-size: 19px;
+  text-align: left;
+}
+
+// **************** Home Page Styles (local)****************
+h1 {
+  margin-bottom: 0;
+  font-size: 36px;
+  letter-spacing: .02em;
+  text-align: center;
+}
+p {
+  margin-top: .3em;
+  font-size: 18px;
+  text-align: center;
+}
+.app-image {
+  display: block;
+  width: auto;
+  height: 24em;
+  margin: 2em auto;
+  border: 18px solid rgb(230,230,230);
+  -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+   	 -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+     	 -o-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+					box-shadow: 2px 2px 4px rgba(0,0,0,.15);
+}
+
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 23px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  h1 {
+    font-size: 51px;
+  }
+  p {
+    font-size: 30px;
+  }
+  .app-image {
+    margin-top: 5em;
+  }
+  #vangogh {
+    padding-left: 0;
+  }
+  #millet {
+    padding-left: .1em;
+  }
+  #picasso {
+    padding-left: 2.1em;
+  }
+  #rothko {
+    padding-left: 3.4em;
+  }
+  #mona-lisa {
+    padding-left: 1.3em;
+  }
+}
+
+// ******************* About Page *****************
+.about-info p {
+  margin-top: 2em;
+  margin-bottom: 4em;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .about-info p {
+    margin-top: 3em;
+  }
+}
+
+
+// ***************** Contact Page *******************
+.contact-ul li {
+  padding-left: .6em;
+  font-size: 20px;
+  list-style: none;
+}
+.ul-list {
+  margin-top: 3.2em;
+}
+.address {
+  margin-bottom: 1.4em;
+}
+.email {
+  margin-bottom: 1.4em;
+  letter-spacing: .03em;
+}
+
+@media screen and (min-width: 768px) {
+  .main-box {
+    margin-top: 110px;
+  }
+  .contact-ul li {
+    margin-left: 180px;
+    font-size: 24px;
+  }
+  .ul-list {
+    margin-top: 4em;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-box {
+    margin-top: 130px;
+  }
+  .contact-ul li {
+    margin-left: 725px;
+    font-size: 25px;
+  }
+  .ul-list {
+    margin-top: 5em;
+  }
+}
