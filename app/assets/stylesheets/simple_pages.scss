@@ -100,7 +100,7 @@ nav ul {
   text-align: left;
 }
 
-// **************** Home Page Styles (local)****************
+// **************** Home Page Styles (local) ****************
 h1 {
   margin-bottom: 0;
   font-size: 36px;
@@ -211,4 +211,44 @@ p {
   .ul-list {
     margin-top: 5em;
   }
+}
+
+/************ Products page **************/
+table {
+  position: relative;
+  width: 40%;
+  display: block;
+  margin: 50px auto;
+  font-size: 20px;
+  align-items: center;
+  text-align: center;
+  letter-spacing: .02em;
+  
+  thead {
+    margin: 5px auto;
+    
+    th {
+      padding: 1.4em;
+      
+      .no-span {
+        display: none;
+      }
+
+    }
+    
+  }
+
+}
+
+td a {
+  text-align: center;
+}
+
+/************ New Products Page ***************/
+form {
+  width: 21%;
+  margin: 50px auto;
+}
+div.actions {
+  margin-top: 22px;
 }
