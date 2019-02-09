@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Product.create(name: "Van Gogh", description: "Sunflowers", img_url: "../../app/assets/images/vangogh_sunflowers.jpg")
+
+Product.create(name: "Jean Francois Millet", description: "The Sower", img_url: "../../app/assets/images/millet_sower.jpg")
+
+Product.create(name: "Pablo Picasso", description: "A Portrait", img_url: "../../app/assets/images/picasso_femme.jpg")
+
+Product.create(name: "Marc Rothko", description: "Color Fields", img_url: "../../app/assets/images/rothko.jpg")
+
+Product.create(name: "Leonardo da Vinci", description: "Mona Lisa", img_url: "../../app/assets/images/mona-lisa.jpg")
