@@ -1,23 +1,24 @@
-<h2> Featured Product:</h2>
+<h2 id="featured-products"> Featured Products:</h2>
 
-<%= @featured_product.name %>
+<% @featured_product.name %>
 
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
-      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <% @products.each do |product| %>
+        <li data-target="#carouselExampleCaptions" data-slide-to=" <%= @product %> " class="<%= " active" if product == @products.first %>"></li>
+      <% end %>
     </ol>
     <div class="carousel-inner">
       <% @products.each do |product| %>
-      <div class="carousel-item <%= " active" if product == @products.first %>">
-        <%= image_tag(product.img_url) %>
-        <div class="carousel-caption d-none d-md-block">
-          <%= product.name %>
+        <div class="carousel-item <%= " active" if product == @products.first %>">
+            <%= image_tag(product.img_url) %>
+          <div class="carousel-caption d-none d-md-block">
+            <%= product.name %>
+          </div>
         </div>
-      </div>
       <% end %>
+    </div>
     <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="sr-only">Previous</span>
