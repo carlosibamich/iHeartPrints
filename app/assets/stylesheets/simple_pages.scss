@@ -236,7 +236,7 @@ header {
   }
   .print-image {
     display: block;
-    width: 260px;
+    max-width: 260px;
     height: auto;
     margin: 6px auto 0 auto;
     border: 11px solid rgb(230,230,230);
