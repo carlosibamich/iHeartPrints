@@ -1,22 +1,24 @@
 class OrdersController < ApplicationController
 
-  # GET
+  # GET /orders
   def index
+    @orders = Order.includes(:product).all
   end
 
-  # GET
+  # GET /orders/1
   def show
+    @order = Order.find(params[:id])
   end
 
-  # GET
+  # GET /orders/new
   def new
   end
 
-  # POST
+  # POST /orders
   def create
   end
 
-  # DELETE
+  # DELETE /orders/1
   def destroy
   end
 
