@@ -10,10 +10,6 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  # GET /orders/new
-  def new
-  end
-
   # POST /orders
   def create
   end

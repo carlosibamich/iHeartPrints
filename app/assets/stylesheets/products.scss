@@ -19,13 +19,14 @@
 
   h2 {
     @include dropshadow;
-    margin-top: 54px;
+    margin-top: 62px;
+    padding-left: 6px;
     color: rgb(245, 156, 131);
-    font-size: 2.3em;
+    font-size: 2.2em;
     text-align: center;
   }
   .img-txt-bg {
-    height: 550px;
+    height: 560px;
     width:100%;
   }
   .print-image {
@@ -33,25 +34,29 @@
     display: block;
     max-width: 96%;
     height: auto;
-    margin: 6px auto 0 auto;
+    margin: 0 auto;
     border: 11px solid rgb(230,230,230);
   }
   p {
-    margin-top: 24px;
-    font-size: 1.3em;
+    margin-top: 18px;
+    padding: 0 2px;
+    font-size: 1.15em;
     text-align: left;
-    line-height: 1.5em;
+    line-height: 1.7em;
   }
   .price {
     @include dropshadow;
-    padding: 4px 14px;
+    padding: 4px 36px;
+    font-size: 1.4em;
     background-color: rgba(240,240,240,.9);
     color: rgb(252, 117, 84);
+    text-align: right;
   }
   .crud-links {
     margin-top: 0;
     margin-left: 6px;
-    font-size: 1.3em;
+    font-size: 1.4em;
+    color: rgb(100,100,100);
   }
 
   @media screen and (min-width: 992px) {
@@ -68,7 +73,8 @@
   display: block;
   margin-top: 50px;
   margin-left: 16px;
-  font-size: 1.6em;
+  font-size: 1.8em;
+  color: rgb(100,100,100);
 }
 
 .bottom-space {
