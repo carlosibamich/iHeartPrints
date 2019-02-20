@@ -16,36 +16,39 @@
 }
 
 .records {
-
+  .center-data-div {
+    padding: 0 18px;
+  }
   h2 {
     @include dropshadow;
     margin-top: 62px;
-    padding-left: 6px;
+    margin-bottom: 14px;
+    padding-left: 8px;
     color: rgb(245, 156, 131);
-    font-size: 2.2em;
+    font-size: 2.25em;
     text-align: center;
   }
   .img-txt-bg {
-    height: 560px;
+    height: 540px;
     width:100%;
   }
   .print-image {
     @include dropshadow;
-    display: block;
     max-width: 96%;
     height: auto;
     margin: 0 auto;
     border: 11px solid rgb(230,230,230);
   }
   p {
-    margin-top: 18px;
+    margin-top: 14px;
     padding: 0 2px;
-    font-size: 1.15em;
+    font-size: 1.12em;
     text-align: left;
-    line-height: 1.7em;
+    line-height: 1.75em;
   }
   .price {
     @include dropshadow;
+    margin-bottom: 0;
     padding: 4px 36px;
     font-size: 1.4em;
     background-color: rgba(240,240,240,.9);

@@ -9,13 +9,13 @@
 products = Product.create(
   [
     {
-      name: "Raphael",
+      name: "Raphael Sanzio",
       description: "The Vatican was a huge source for commissions for the extraordibarliy prolific young Raphael. Among the best examples of of the young artist's mastery is The Sisitine Madonna.",
       img_url: "raphael_sistine-m.jpg",
       price: 25.95
     },
     {
-      name: "Van Gogh",
+      name: "Vincent van Gogh",
       description: "Perhaps the most famous painting of sunflowers from the series painted by Van Gogh during his stay in Arles, France — where he hoped to create an artist community.",
       img_url: "vangogh_sunflowers.jpg",
       price: 22.95
@@ -43,6 +43,6 @@ products = Product.create(
       description: "The iconic image of the Mona Lisa and her famous smile is the most famous example of Da Vinci's breakthrough technique known as sfumato.",
       img_url: "mona-lisa.jpg",
       price: 23.95
-    }
+    },
   ]
 )
