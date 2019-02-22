@@ -3,5 +3,6 @@
   <strong>Order ID: </strong><%= @order.id %>
   <strong>Product Name: </strong><%= @order.product.name %>
   <strong>Product Price: </strong><%= number_to_currency(@order.product.price/100.to_f) %>
-  <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %>
+  <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %><br>
+  <img><%= image_tag(@order.product.img_url, class: "img-responsive orders-image" ) %></img>
 </div>

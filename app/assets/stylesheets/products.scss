@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/************ Products page **************/
+/************ Products Index page **************/
 
 @mixin dropshadow {
   -webkit-text-shadow: 2px 2px 8px rgba(0,0,0,.12);
@@ -17,19 +17,20 @@
 
 .records {
   .center-data-div {
+    margin-top: 20px;
     padding: 0 18px;
   }
-  h2 {
+  .product-header2 {
     @include dropshadow;
     margin-top: 62px;
     margin-bottom: 14px;
     padding-left: 8px;
     color: rgb(245, 156, 131);
-    font-size: 2.25em;
+    font-size: .9em;
     text-align: center;
   }
   .img-txt-bg {
-    height: 540px;
+    height: 580px;
     width:100%;
   }
   .print-image {
@@ -61,13 +62,25 @@
     font-size: 1.4em;
     color: rgb(100,100,100);
   }
+  @media screen and (min-width: 768px) {
+    .img-txt-bg {
+      height: 600px;
+    }
+  }
 
   @media screen and (min-width: 992px) {
-    h2 {
+    .center-data-div {
+      margin-top: 40px;
+    }
+    .product-header2 {
+      font-size: .92em;
       text-align: left;
     }
     .print-image {
       margin-left: 0;
+    }
+    .img-txt-bg {
+      height: 540px;
     }
   }
 }
@@ -91,4 +104,10 @@ form {
 }
 div.actions {
   margin-top: 22px;
+}
+
+/************** Products Show Page ***************/
+
+.prod-show-description {
+  line-height: 1.6em;
 }

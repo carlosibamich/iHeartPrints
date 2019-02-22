@@ -1,0 +1,25 @@
+// Place all the styles related to the orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*************** Orders Page ******************/
+.orders-header {
+  font-size: 3em;
+}
+.orders-p {
+  font-size: 1.65em;
+  line-height: 1.4em;
+}
+.orders-image {
+  width: 200px;
+  height: auto;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 8px solid rgb(230,230,230);
+}
+.orders-price {
+  font-size: 1.6em;
+}
+.orders-box {
+  padding: 0 30px;
+}

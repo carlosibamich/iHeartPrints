@@ -91,7 +91,7 @@ nav ul {
 
 // ********** Footer (global) ***********
 .site-footer {
-  height: 73px;
+  height: 62px;
   margin-top: 3em;
   font-size: 22px;
   font-weight: 400;
@@ -100,10 +100,9 @@ nav ul {
   background-color: rgb(105,107,105);
 }
 .site-footer p {
-  display: block;
-  margin-top: 16px;
+  margin-top: 19px;
   margin-left: 24px;
-  font-size: 19px;
+  font-size: 17px;
   text-align: left;
 }
 
@@ -292,9 +291,4 @@ header {
   .ul-list {
     margin-top: 5em;
   }
-}
-
-/*************** Orders Page ******************/
-.order-p {
-  line-height: 1em !important;
 }

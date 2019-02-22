@@ -1,12 +1,13 @@
-<div class="row">
+<div class="row orders-box">
   <% @orders.each do |order| %>
     <div class="col-sm">
-      <h1>
+      <h1 class="orders-header">
         Order # <%= order.id %>:
         <%= link_to order.product.name, order %>
       </h1>
-      <p class="order-p"><%= order.product.description %></p>
-      <strong>$ <%= order.product.price %></strong>
+      <p class="orders-p"><%= order.product.description %></p>
+      <img><%= image_tag(order.product.img_url, class: "img-responsive orders-image") %></img><br>
+      <strong class="orders-price">$ <%= order.product.price %></strong>
     </div>
   <% end %>
 </div>
