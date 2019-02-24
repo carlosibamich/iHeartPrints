@@ -5,4 +5,6 @@
   <strong>Product Price: </strong><%= number_to_currency(@order.product.price.to_f) %>
   <strong>Total Price (with shipping): </strong><%= number_to_currency(@order.total.to_f) %><br>
   <img><%= image_tag(@order.product.img_url, class: "img-responsive orders-image" ) %></img>
+  <br>
+  <%= link_to 'Back', orders_path, :class => "orders-back" %>
 </div>

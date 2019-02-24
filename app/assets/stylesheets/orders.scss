@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*************** Orders Page ******************/
+// ************* Orders Page ************ //
 .order-header {
   font-size: 2.6em;
 }
@@ -22,4 +22,11 @@
 }
 .orders-box {
   padding: 0 30px;
+}
+
+// ************ Orders Show Page *********** //
+.orders-back {
+  margin-top: 2em;
+  font-size: 1.6em;
+  color: rgb(98,98,98);
 }
