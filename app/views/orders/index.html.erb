@@ -1,7 +1,7 @@
 <div class="row orders-box">
   <% @orders.each do |order| %>
     <div class="col-sm">
-      <h1 class="orders-header">
+      <h1 class="order-header">
         Order # <%= order.id %>:
         <%= link_to order.product.name, order %>
       </h1>

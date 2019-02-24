@@ -1,7 +1,5 @@
-<h2 id="featured-products"> Featured Products</h2>
 
-<%# @featured_product.name %>
-
+<h2 id="featured-paintings">Featured Paintings</h2>
 <div class="bd-example">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -11,10 +9,10 @@
     </ol>
     <div class="carousel-inner">
       <% @products.each do |product| %>
-        <div class="carousel-item <%= " active" if product == @products.first %>">
-            <%= image_tag(product.img_url) %>
+        <div class="carousel-item <%= " active" if product == @products.first %> ">
+          <img><%= image_tag(product.img_url) %></img>
           <div class="carousel-caption d-none d-md-block">
-            <%= product.name %>
+            <strong><%= product.name %></strong>
           </div>
         </div>
       <% end %>
