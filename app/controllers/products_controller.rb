@@ -5,12 +5,27 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.all
+    if Rails.env.production?
+      if params[:q]
+        search_term = params[:q]
+        @products = Product.search(search_term)
+      else
+        @products
+      end
+    else
+      if params[:q]
+        search_term = params[:q]
+        @products = Product.look_for(search_term)
+      else
+        @products
+      end
+    end
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
-    redirect_to '/simple_pages/about'
+
   end
 
   # GET /products/new
@@ -20,7 +35,7 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
-    redirect_to '/simple_pages/landing_page'
+
   end
 
   # POST /products
@@ -71,6 +86,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :description, :img_url, :price)
+      params.require(:product).permit(:name, :description, :img_url, :price, :q)
     end
 end

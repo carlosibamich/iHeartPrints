@@ -17,10 +17,10 @@
 
   <body data-spy="scroll" data-target="#navbar-example">
     <header class="container-fluid" id="home">
-      #navbar starts here
+      <!-- navbar starts here -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" role="navigation" id="navbar-example">
         <a class="navbar-brand" id="nav-brand">I HE<span class="art">ART</span> PRINTS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -32,17 +32,23 @@
               <%= link_to "Products", products_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
+              <%= link_to "Order", orders_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
               <%= link_to "About", simple_pages_about_path, class: "nav-link" %>
             </li>
             <li class="nav-item">
               <%= link_to "Contact", simple_pages_contact_path, class: "nav-link" %>
             </li>
-            <li class="nav-item">
-              <%= link_to "Order", orders_path, class: "nav-link" %>
-            </li>
           </ul>
         </div>
-      </nav> # end navbar
+
+        <%= form_with(url: products_path, method: 'GET', class: "search-form", local: true) do |form| %>
+          <%= form.text_field :q, id: 'q', value: params[:q], class:"search-input" %>
+          <%= form.submit 'Search', class:"search-submit" %>
+        <% end %>
+
+      </nav><!-- end navbar -->
     </header>
 
 

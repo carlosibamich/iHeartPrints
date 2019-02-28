@@ -11,6 +11,11 @@
 					text-shadow: 2px 2px 8px rgba(0,0,0,.12);
 }
 
+@mixin new-show-back-links {
+  font-size: 1.7em;
+  color: rgb(100,100,100);
+}
+
 .products-header {
   margin-top: -26px;
 }
@@ -97,15 +102,35 @@
   height: 120px;
 }
 
-/************ New Products Page ***************/
-form {
-  width: 21%;
-  margin: 50px auto;
-}
-div.actions {
-  margin-top: 22px;
+/************ _Form New/Edit Products ***************/
+.btn input {
+  margin-top: 14px;
+  margin-left: -12px !important;
+  padding: 4px 9px;
+  color: rgb(110,110,110);
+  border-radius: 6px ;
+  background-color: rgb(235,235,235);
 }
 
+/************** Products New Page ****************/
+.edit-new-h1 {
+  font-size: 2.6em;
+}
+.new-back-link {
+  @include new-show-back-links
+}
+
+@media screen and (min-width: 768px) {
+  .edit-new-h1 {
+    font-size: 3.6em;
+  }
+}
+
+/************ Products Edit Page ****************/
+.show-back-links {
+  margin-right: 22px;
+  @include new-show-back-links
+}
 /************** Products Show Page ***************/
 
 .prod-show-description {

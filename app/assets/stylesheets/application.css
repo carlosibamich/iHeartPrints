@@ -13,3 +13,177 @@
  *= require_tree .
  *= require_self
  */
+
+/* ----------- Global Styling ----------- */
+* {
+ box-sizing: border-box;
+}
+html, body {
+ height: 100%;
+ margin: 0;
+ padding: .2em !important;
+ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+ color: rgb(249,249,249);
+ background-color: rgb(130, 159, 163);
+}
+.container-fluid{
+  margin: 0 !important;
+	padding: 0 !important;
+}
+.row {
+  max-width: 100%;
+	margin-right: 0 !important;
+	margin-left: 0 !important;
+}
+.main-box {
+ margin-top: 110px;
+}
+.art {
+ color: rgb(255,173,153);
+}
+.art-strip {
+ margin-bottom: 120px;
+}
+
+
+/* ----------- Navigation Bar ---------- */
+nav {
+  min-height: 60px;
+}
+.navbar-brand {
+ display:none;
+}
+#nav-brand {
+ color: rgb(140,140,140);
+}
+nav ul {
+ padding-right: 30px;
+ margin-top: 4px;
+}
+.nav-item .nav-link {
+ padding-top: 0;
+ padding-left: .8em !important;
+ font-size: 20px;
+ font-weight: 500;
+  transition: color 300ms;
+  -webkit-transition: color 300ms;
+}
+.nav-item .nav-link:hover {
+ color: rgb(252, 135, 108) !important;
+}
+.navbar-light .navbar-toggler {
+  margin-top: 8px;
+  margin-bottom: 7px;
+	outline: none;
+}
+.navbar-nav {
+ padding-right: .2em;
+}
+#navbarSupportedContent {
+ padding-right: .2em;
+	margin-top: 1.3em;
+	margin-bottom: 1.1em;
+	text-align: right;
+	line-height: 1.2em;
+}
+.navbar {
+ padding-top: 1px;
+ padding-bottom: 1px;
+ background-color: rgb(246,246,246) !important;
+ border-top: 7px solid rgb(140,140,140);
+ -webkit-box-shadow: 0 3px 12px rgba(0,0,0,.16);
+  	 -moz-box-shadow: 0 3px 12px rgba(0,0,0,.16);
+    	 -o-box-shadow: 0 3px 12px rgba(0,0,0,.16);
+					box-shadow: 0 3px 12px rgba(0,0,0,.16);
+}
+form.search-form {
+  display: inline-block;
+  position: absolute;
+  top: -2px;
+  width: 250px;
+  height: 56px;
+  margin: 0 6px 0 18px;
+}
+.search-input {
+  width: 185px;
+  height: 24px;
+  margin: 18px 0;
+  padding-left: 10px;
+  border: 2px solid rgb(160,160,160);
+  border-right: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  outline: none;
+}
+.search-submit {
+  position: absolute;
+  width: 64px;
+  height: 24px;
+  top: 27px;
+  margin-top: -9px;
+  margin-left: -4px;
+  padding-left: 3px;
+  padding-bottom: 4px;
+  color: rgb(255,255,255);
+  letter-spacing: .03em;
+  background-color: rgb(160,160,160);
+  border: 2px solid rgb(160,160,160);
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  outline: none;
+}
+.search-submit:hover {
+  cursor: pointer;
+  background-color: rgb(135,135,135);
+}
+
+/* ---- Navigation Bar (screen min-width 768px) ---- */
+@media screen and (min-width: 768px) {
+  .navbar-brand {
+    display: block;
+    margin-left: 16px;
+    font-size: 26px;
+  }
+  nav {
+    min-height: 64px;
+  }
+  form.search-form {
+    right: 90px;
+    width: 284px;
+  }
+  .search-input {
+    width: 219px;
+    height: 26px;
+  }
+  .search-submit {
+    width: 64px;
+    height: 26px;
+  }
+}
+
+/* ---- Navigation Bar (screen min-width 992px) ---- */
+@media screen and (min-width: 992px) {
+  form.search-form {
+    display: inline-block;
+    position: relative;
+    right: 0;
+    width: 284px;
+  }
+}
+
+/* ---------- Footer ---------- */
+.site-footer {
+ height: 62px;
+ margin-top: 3em;
+ font-size: 22px;
+ font-weight: 400;
+ letter-spacing: .04em;
+ border-top: 8px solid rgb(230,230,230);
+ background-color: rgb(105,107,105);
+}
+.site-footer p {
+ margin-top: 19px;
+ margin-left: 24px;
+ font-size: 17px;
+ text-align: left;
+}

@@ -11,27 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+<form role="form">
+  <div class="field form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :img_url %>
-    <%= form.text_field :img_url %>
+    <%= form.text_field :img_url, class: "form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.text_field :price, class: "form-control" %>
   </div>
 
-  <div class="actions">
+  <div class="actions form-group btn">
     <%= form.submit %>
   </div>
+</form>
+
 <% end %>
