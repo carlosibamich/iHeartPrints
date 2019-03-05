@@ -1,7 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'carlosibamich@hotmail.com'
   layout 'mailer'
 
-  # def thank_you
-  # end
 end
