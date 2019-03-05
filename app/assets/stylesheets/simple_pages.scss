@@ -49,7 +49,7 @@
   }
 }
 
-// **************** Home Page Styles (local) ****************
+// **************** Home Page Styles (local) **************** //
 header {
   h1 {
     margin-bottom: 0;
@@ -110,7 +110,7 @@ header {
   }
 }
 
-// ******************* About Page *****************
+// ******************* About Page ***************** //
 .about-info {
   h1 {
     font-size: 1.6em;
@@ -149,12 +149,17 @@ header {
 }
 
 
-// ***************** Contact Page *******************
+// ***************** Contact Page ******************* //
 .contact-head h1 {
   margin-left: -20px;
-  font-size: 2.2em;
+  font-size: 2.3em;
+}
+.contact-ul {
+  margin-top: 0px;
+  padding-right: 0;
 }
 .contact-ul li {
+  margin-bottom: 18px;
   padding-left: .6em;
   font-size: 18px;
   list-style: none;
@@ -176,13 +181,18 @@ header {
   .main-box {
     margin-top: 110px;
   }
+  .contact-ul {
+    margin-top: 20px;
+    padding-right: 0;
+  }
   .contact-head h1 {
     margin-left: 0;
     font-size: 3.2em;
   }
   .contact-ul li {
-    margin-left: 180px;
-    font-size: 27px;
+    margin-bottom: 28px;
+    margin-left: 10px;
+    font-size: 23px;
   }
   .ul-list {
     margin-top: 4em;
@@ -198,10 +208,50 @@ header {
     font-size: 3.9em;
   }
   .contact-ul li {
-    margin-left: 725px;
-    font-size: 28px;
+    margin-left: 15px;
+    font-size: 24px;
   }
   .ul-list {
     margin-top: 5em;
+  }
+}
+
+// ******************* Thank_You Page ******************** //
+.panel-body {
+  position: relative;
+}
+.thanku-header {
+  text-align: center;
+}
+.thanku-message {
+  margin-top: 34px;
+  margin-bottom: 34px;
+  font-size: 1.3em;
+  text-align: left;
+  line-height: 1.4em;
+}
+a.thanku-back-link {
+  font-size: 1.3em;
+  color: rgb(100,100,100);
+}
+@media screen and (min-width: 768px) {
+  .thanku-message {
+    margin-bottom: 40px;
+    font-size: 1.8em;
+  }
+  a.thanku-back-link {
+    font-size: 1.8em;
+  }
+}
+@media screen and (min-width: 992px) {
+  .thanku-message {
+    margin-top: 40px;
+    font-size: 2.2em;
+    text-align: center;
+  }
+  a.thanku-back-link {
+    position: absolute;
+    left: 135px;
+    font-size: 1.8em;
   }
 }
