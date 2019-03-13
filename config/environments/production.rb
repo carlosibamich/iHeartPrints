@@ -14,6 +14,9 @@ Rails.application.configure do
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
 
+  # The following is included so that any dynamic links that show up inside emails from your production environment generate the right URLs.
+  config.action_mailer.default_url_options = { host: 'iheartprints.herokuapp.com' }
+
   # Ensures that a master key has been made available in either ENV["RAILS_MASTER_KEY"]
   # or in config/master.key. This key is used to decrypt credentials (and other encrypted files).
   # config.require_master_key = true

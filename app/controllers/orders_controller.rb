@@ -1,5 +1,7 @@
 class OrdersController < ApplicationController
 
+  before_action :authenticate_user!
+
   # GET /orders
   def index
     @orders = Order.includes(:product).all

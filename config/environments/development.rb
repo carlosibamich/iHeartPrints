@@ -27,6 +27,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # The following is included so that any dynamic links that show up inside emails from your development environment generate the right URLs.
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
