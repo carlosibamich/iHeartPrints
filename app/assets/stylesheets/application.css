@@ -45,7 +45,43 @@ html, body {
 .art-strip {
  margin-bottom: 120px;
 }
+.alert,
+.notice {
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 15px 8px;
+  font-size: 18px;
+  color: rgb(255,160,140);
+  text-align: center;
+  background-color: rgb(255,255,255);
+  border-radius: 0px;
+  -webkit-box-shadow: 0 3px 8px rgba(0,0,0,.18);
+      -moz-box-shadow: 0 3px 8px rgba(0,0,0,.18);
+        -o-box-shadow: 0 3px 8px rgba(0,0,0,.18);
+           box-shadow: 0 3px 8px rgba(0,0,0,.18);
+}
+#notice {
+  display: none;
+}
 
+@media screen and (min-width: 768px) {
+  .alert,
+  .notice {
+    width: 660px;
+    padding: 18px 10px;
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .alert,
+  .notice {
+    width: 1000px;
+    padding: 30px 18px;
+    font-size: 32px;
+  }
+}
 
 /* ----------- Navigation Bar ---------- */
 nav {

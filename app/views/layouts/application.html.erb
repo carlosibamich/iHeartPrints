@@ -59,21 +59,20 @@
           <%= form.submit 'Search', class:"search-submit" %>
         <% end %>
 
-
-
       </nav><!-- end navbar -->
     </header>
 
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-
     <main class="main-box page-wrap">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+        <% end %>
+      <% if alert %>
+        <p class="alert"><%= alert %></p>
+      <% end %>
 
       <%= yield %>
 
     </main>
-
 
     <footer class="container-fluid site-footer fixed-bottom">
       <section class="footer-box">
