@@ -16,5 +16,8 @@
 //= require jquery3
 //= require_tree .
 $(document).on('turbolinks:load', function() {
-  $('.alert, .notice').delay(2000).slideUp(1000);
+
+  noticeAlert = $('.alert, .notice');
+  noticeAlert.delay(2000).fadeOut(1000);
+
 });

@@ -64,5 +64,8 @@ gem 'devise'
 # Gem Cancancan creates all the code necessary for user authorization
 gem 'cancancan', '~> 2.0'
 
+# Github icons. Ruby gems with Ruby API.
+gem 'octicons'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
