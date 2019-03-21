@@ -1,29 +1,39 @@
 
 <section class="container-fluid">
   <div class="row">
-    <div class="col-10 offset-1 col-md-8 offset-md-2">
+    <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
       <p id="notice"><%= notice %></p>
-      <p>
+      <p class="show-text">
         <strong>Name:</strong>
         <%= @product.name %>
       </p>
 
-      <p class="prod-show-description">
+      <p class="show-text">
         <strong>Description:</strong>
         <%= @product.description %>
       </p>
 
-      <p>
+      <!-- <p class="show-text">
         <strong>Img url:</strong>
         <%= @product.img_url %>
-      </p>
+      </p> -->
 
-      <p>
+      <p class="show-text">
         <strong>Price:</strong>
         <%= @product.price %>
       </p>
-      <%= link_to 'Edit', edit_product_path(@product) %> |
-      <%= link_to 'Back', products_path %>
+
+      <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image" ) %></img>
+
+      <p class="comment-intro">What other buyers have said about this product:</p>
+      <div class="comment-space">
+        <%= @product.highest_rated_comment %><br>
+        <%= @product.lowest_rated_comment %>
+      </div>
+
+      <%= link_to 'Edit', edit_product_path(@product), class: "show-back-links" %>
+      <%= link_to 'Back', products_path, class: "show-back-links" %>
     </div><!-- end .cols-xx -->
   </div><!-- end .row -->
+  <div class="footer-space"></div>
 </section><!-- end .container-fluid -->

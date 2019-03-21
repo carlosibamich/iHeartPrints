@@ -63,12 +63,15 @@
     </header>
 
     <main class="main-box page-wrap">
-      <% if notice %>
-        <p class="notice"><%= notice %></p>
+
+      <div class="notice-alert-bg">
+        <% if notice %>
+          <p class="notice"><%= notice %></p>
+          <% end %>
+        <% if alert %>
+          <p class="alert"><%= alert %></p>
         <% end %>
-      <% if alert %>
-        <p class="alert"><%= alert %></p>
-      <% end %>
+      </div>
 
       <%= yield %>
 

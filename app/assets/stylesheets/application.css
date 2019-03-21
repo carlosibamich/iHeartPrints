@@ -64,6 +64,12 @@ html, body {
 #notice {
   display: none;
 }
+/*.notice-alert-bg {
+  display: none;
+  width: 320px;
+  height: 48px;
+  margin: 0 auto;
+}*/
 
 @media screen and (min-width: 768px) {
   .alert,
