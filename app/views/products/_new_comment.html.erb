@@ -1,0 +1,16 @@
+<% if signed_in? %>
+  <hr class="comments-border">
+  <p class="new-comment-header">Add a review:</p>
+  <%= form_for([@product, @product.comments.build]) do |f| %>
+    <p>
+      <%= f.text_area :body, placeholder: "Enter your comment here...", class: "form-control text-area" %>
+    </p>
+    <p>
+      <div class="rating"></div>
+    </p>
+    <p class="submit-button">
+      <%= f.submit "Submit", class: "submit-btn" %>
+    </p>
+  <% end %>
+  <hr class="comments-border">
+<% end %>

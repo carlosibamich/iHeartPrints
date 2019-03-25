@@ -13,11 +13,6 @@
         <%= @product.description %>
       </p>
 
-      <!-- <p class="show-text">
-        <strong>Img url:</strong>
-        <%= @product.img_url %>
-      </p> -->
-
       <p class="show-text">
         <strong>Price:</strong>
         <%= @product.price %>
@@ -25,11 +20,13 @@
 
       <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image" ) %></img>
 
-      <p class="comment-intro">What other buyers have said about this product:</p>
-      <div class="comment-space">
-        <%= @product.highest_rated_comment %><br>
-        <%= @product.lowest_rated_comment %>
+      <p class="average-rating-block"><strong>Average rating:</strong>  <span class="rated" data-score="<%= @product.average_rating %>"></span></p>
+
+      <div>
+        <%= render 'comments' %>
       </div>
+
+      <%= render 'new_comment' %>
 
       <%= link_to 'Edit', edit_product_path(@product), class: "show-back-links" %>
       <%= link_to 'Back', products_path, class: "show-back-links" %>
