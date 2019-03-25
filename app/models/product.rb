@@ -18,6 +18,10 @@ class Product < ApplicationRecord
     comments.rating_asc.first
   end
 
+  def average_rating
+    comments.average(:rating).to_f
+  end
+
 end
 
 # Another way of passing parameters into .where query so that both SQLite3 and PostgreSQL understand it is by lower-casing all letters by hand using the following:

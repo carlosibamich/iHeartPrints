@@ -146,16 +146,12 @@
 .products-show-image {
   width: 150px;
   height: auto;
+  margin-bottom: 30px;
   border: 6px solid rgb(230,230,230);
 }
-.comment-intro {
-  margin-top: 32px;
+.average-rating-block {
   font-size: 18px;
-  color: rgb(215,215,215);
-  line-height: 22px;
-}
-.comment-space {
-  height: 300px;
+  color: rgb(255,173,153);
 }
 .footer-space {
   height: 86px;
@@ -175,23 +171,118 @@
     height: auto;
     border: 8px solid rgb(230,230,230);
   }
+}
+
+@media screen and (min-width: 992px) {
+  .products-show-image {
+    width: 220px;
+    height: auto;
+  }
+  .average-rating-block {
+    font-size: 20px;
+  }
+}
+
+/* ------------------ _new_comment partial ---------------- */
+.comments-border {
+  margin-bottom: 40px;
+  border: 1px solid rgb(230,230,230);
+}
+.new-comment-header {
+  margin-top: 30px;
+  margin-bottom: 24px;
+  font-size: 22px;
+  color: rgb(215,215,215);
+}
+.text-area {
+  height: 80px;
+  margin-bottom: 28px;
+  background-color: rgb(240,240,240);
+  resize: none;
+}
+p ::placeholder {
+  font-size: 16px;
+  color: rgb(180,180,180) !important;
+	opacity: 1; /* Firefox */
+	overflow: visible;
+}
+p :-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: rgb(180,180,180);
+ overflow: visible;
+}
+p ::-ms-input-placeholder { /* Microsoft Edge */
+ color: rgb(180,180,180);
+ overflow: visible;
+}
+.rating {
+  margin-bottom: 28px;
+}
+p .submit-btn {
+  margin-bottom: 22px;
+  padding: 8px;
+  padding-left: 6px;
+  font-size: 16px;
+  color: rgb(142,142,142);
+  background-color: rgb(240,240,240);
+  border-radius: 4px;
+  transition: color 240ms;
+	-webkit-transition: color 240ms;
+}
+p .submit-btn:hover {
+  color: rgb(255,173,153);
+  background-color: rgb(255,255,255);
+}
+
+@media screen and (min-width: 768px) {
+  .text-area {
+    height: 100px;
+  }
+  p ::placeholder {
+    font-size: 19px;
+  }
+  p .submit-btn {
+    margin-bottom: 32px;
+    padding: 12px;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+}
+
+/* -------------- _comments partial --------------- */
+.product-reviews {
+  margin-bottom: 48px;
+}
+.review-comments{
+  p {
+    margin-top: 8px;
+    font-size: 16px;
+    line-height: 6px;
+  }
+  div {
+    margin-top: 2px;
+  }
+}
+.comment-intro {
+  margin-top: 32px;
+  font-size: 18px;
+  color: rgb(215,215,215);
+  line-height: 22px;
+}
+.separator {
+  border: 1px solid rgb(100,100,100);
+}
+
+@media screen and (min-width: 768px) {
   .comment-intro {
-    margin-top: 30px;
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 20px;
+  }
+  .review-comments p {
+    font-size: 18px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .show-text {
+  .comment-intro {
     font-size: 22px;
-    line-height: 30px;
-  }
-  .show-text strong {
-    font-size: 26px;
-  }
-  .products-show-image {
-    width: 220px;
-    height: auto;
   }
 }
