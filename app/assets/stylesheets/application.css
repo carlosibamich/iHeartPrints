@@ -48,9 +48,11 @@ html, body {
 }
 .alert,
 .notice {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 320px;
-  margin: 0 auto;
-  margin-bottom: 30px;
+  /*margin: 0 auto;*/
   padding: 15px 8px;
   font-size: 18px;
   color: rgb(255,160,140);
@@ -62,15 +64,17 @@ html, body {
         -o-box-shadow: 0 3px 8px rgba(0,0,0,.18);
            box-shadow: 0 3px 8px rgba(0,0,0,.18);
 }
-#notice {
-  display: none;
-}
-/*.notice-alert-bg {
+.notice-alert-bg {
+  position: relative;
   display: none;
   width: 320px;
   height: 48px;
   margin: 0 auto;
-}*/
+  margin-bottom: 12px;
+}
+#notice {
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
   .alert,
@@ -78,6 +82,11 @@ html, body {
     width: 660px;
     padding: 18px 10px;
     font-size: 22px;
+  }
+  .notice-alert-bg {
+    width: 660px;
+    height: 54px;
+    margin-bottom: 14px;
   }
 }
 
@@ -87,6 +96,11 @@ html, body {
     width: 1000px;
     padding: 30px 18px;
     font-size: 32px;
+  }
+  .notice-alert-bg {
+    width: 1000px;
+    height: 78px;
+    margin-bottom: 30px;
   }
 }
 
