@@ -64,14 +64,16 @@
 
     <main class="main-box page-wrap">
 
-      <div class="notice-alert-bg">
-        <% if notice %>
+      <% if notice %>
+        <div class="notice-alert-bg">
           <p class="notice"><%= notice %></p>
-          <% end %>
-        <% if alert %>
+        </div>
+      <% end %>
+      <% if alert %>
+        <div class="notice-alert-bg"
           <p class="alert"><%= alert %></p>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
 
       <%= yield %>
 

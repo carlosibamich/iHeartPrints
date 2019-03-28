@@ -19,7 +19,11 @@
 
 $(document).on('turbolinks:load', function() {
 
+  noticeAlertBg = $('.notice-alert-bg');
   noticeAlert = $('.alert, .notice');
-  noticeAlert.delay(2000).fadeOut(1000);
+
+  noticeAlertBg.css("display", "block");
+  noticeAlert.delay(1500).fadeOut(800);
+  noticeAlertBg.delay(2200).slideUp(800);
 
 });

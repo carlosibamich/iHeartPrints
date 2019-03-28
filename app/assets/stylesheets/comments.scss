@@ -1,3 +1,161 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/* ------------------ _new_comment partial ---------------- */
+.comments-border {
+  margin-bottom: 20px;
+  border: 1px solid rgb(230,230,230);
+}
+.new-comment-header {
+  margin-top: 30px;
+  margin-bottom: 24px;
+  margin-left: 5px;
+  font-size: 22px;
+  color: rgb(215,215,215);
+}
+.text-area {
+  height: 80px;
+  margin-bottom: 28px;
+  background-color: rgb(240,240,240);
+  resize: none;
+}
+p ::placeholder {
+  font-size: 16px;
+  color: rgb(180,180,180) !important;
+	opacity: 1; /* Firefox */
+	overflow: visible;
+}
+p :-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: rgb(180,180,180);
+ overflow: visible;
+}
+p ::-ms-input-placeholder { /* Microsoft Edge */
+ color: rgb(180,180,180);
+ overflow: visible;
+}
+.rating {
+  margin-bottom: 28px;
+}
+p .submit-btn {
+  margin-bottom: 22px;
+  padding: 8px;
+  padding-left: 6px;
+  font-size: 16px;
+  color: rgb(142,142,142);
+  background-color: rgb(240,240,240);
+  border-radius: 4px;
+  transition: color 240ms;
+	-webkit-transition: color 240ms;
+}
+p .submit-btn:hover {
+  color: rgb(255,173,153);
+  background-color: rgb(255,255,255);
+}
+
+@media screen and (min-width: 768px) {
+  .text-area {
+    height: 100px;
+  }
+  p ::placeholder {
+    font-size: 19px;
+  }
+  p .submit-btn {
+    margin-bottom: 32px;
+    padding: 12px;
+    padding-left: 10px;
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 992px) {
+  .new-comment-header {
+    margin-top: 50px;
+  }
+}
+
+/* -------------- _comments partial --------------- */
+.product-reviews {
+  margin-bottom: 20px;
+}
+.first-column {
+  margin-bottom: 14px;
+  p {
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+}
+.second-column {
+  font-size: 16px;
+  color: rgb(215,215,215);
+  line-height: 23px;
+}
+.comment-intro {
+  margin-top: 32px;
+  font-size: 18px;
+  color: rgb(215,215,215);
+  line-height: 24px;
+}
+.separator {
+  margin: 10px 0;
+  border: 1px solid rgba(100,100,100,.3);
+}
+/* --- paginate gem styles --- */
+.apple_pagination {
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: .6px;
+  padding: 1em;
+  padding-left: 5px;
+  cursor: pointer;
+}
+.apple_pagination a,
+.apple_pagination span {
+  padding: 0.2em 0.4em;
+}
+.apple_pagination .disabled {
+  color: rgb(205,205,205);
+}
+.apple_pagination .current {
+  margin: 2px 2px 0 2px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(130, 159, 163);
+  background-color: rgb(238,238,238);
+  display: inline-block;
+  width: 1.4em;
+  height: 1.4em;
+  line-height: 1.5;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+.apple_pagination a {
+  text-decoration: none;
+  color: rgb(238,238,238);
+}
+.apple_pagination a:hover,
+.apple_pagination a:focus {
+  text-decoration: underline;
+}
+
+
+@media screen and (min-width: 768px) {
+  .comment-intro {
+    font-size: 20px;
+  }
+  .review-comments p {
+    font-size: 18px;
+  }
+  .separator {
+    margin: 12px 0;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .comment-intro {
+    font-size: 22px;
+  }
+}

@@ -37,6 +37,9 @@ gem 'jbuilder', '~> 2.5'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+# Gemfile for Rails 3+
+gem 'will_paginate', '~> 3.1.1'
+
 group :production do
   # Use pg to communicate with PostgreSQL databases
   gem 'pg'
