@@ -27,6 +27,9 @@ html, body {
  color: rgb(249,249,249);
  background-color: rgb(130, 159, 163);
 }
+h2 {
+  margin-bottom: 0 !important;
+}
 .container-fluid{
   margin: 0 !important;
 	padding: 0 !important;

@@ -31,7 +31,7 @@
     margin-bottom: 14px;
     padding-left: 8px;
     color: rgb(245, 156, 131);
-    font-size: .9em;
+    font-size: 28px;
     text-align: center;
   }
   .img-txt-bg {
@@ -40,7 +40,7 @@
   }
   .print-image {
     @include dropshadow;
-    max-width: 96%;
+    max-width: 94%;
     height: auto;
     margin: 0 auto;
     border: 11px solid rgb(230,230,230);
@@ -78,7 +78,7 @@
       margin-top: 40px;
     }
     .product-header2 {
-      font-size: .92em;
+      font-size: 26px;
       text-align: left;
     }
     .print-image {

@@ -7,9 +7,11 @@
     </div><!-- end .img-txt-bg -->
     <p class="price">$ <%= product.price %></p>
     <br>
-    <span>
-      <%= link_to 'Show', product, :class => "crud-links" %>
-      <%= link_to 'Edit', edit_product_path(product), :class => "crud-links" %>
-      <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => "crud-links" %>
-    </span>
+    <% if signed_in? && current_user.admin? %>
+      <span>
+        <%= link_to 'Show', product, :class => "crud-links" %>
+        <%= link_to 'Edit', edit_product_path(product), :class => "crud-links" %>
+        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, :class => "crud-links" %>
+      </span>
+    <% end %>
   </div>
