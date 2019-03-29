@@ -29,5 +29,8 @@ module FirstRailsApp
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    # The configuration below allows a fonts folder within app/assets to store fonts and gives app the path to find them. In other words, adds this folder to the asset pipeline.
+    #! config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
