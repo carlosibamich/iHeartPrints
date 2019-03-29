@@ -45,6 +45,13 @@
     margin: 0 auto;
     border: 11px solid rgb(230,230,230);
   }
+  .print-image:hover {
+    border: 11px solid rgb(255,255,255);
+    -webkit-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+     	 -moz-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+       	 -o-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+  					text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+  }
   p {
     margin-top: 14px;
     padding: 0 2px;
