@@ -28,11 +28,9 @@
   .product-header2 {
     @include dropshadow;
     margin-top: 62px;
-    margin-bottom: 14px;
-    padding-left: 8px;
+    margin-left: 16px;
     color: rgb(245, 156, 131);
-    font-size: 28px;
-    text-align: center;
+    font-size: 26px;
   }
   .img-txt-bg {
     height: 580px;
@@ -78,6 +76,9 @@
     .img-txt-bg {
       height: 600px;
     }
+    .product-header2 {
+      margin-left: 18px;
+    }
   }
 
   @media screen and (min-width: 992px) {
@@ -85,8 +86,7 @@
       margin-top: 40px;
     }
     .product-header2 {
-      font-size: 26px;
-      text-align: left;
+      margin-left: 6px;
     }
     .print-image {
       margin-left: 0;

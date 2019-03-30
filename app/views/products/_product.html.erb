@@ -3,7 +3,6 @@
     <h2><%= link_to product.name, product, class: "product-header2" %></h2>
     <div class="img-txt-bg">
       <img><%= link_to image_tag(product.img_url, class: "img-responsive print-image"), product %></img>
-      <!-- <img><%= image_tag(product.img_url, class: "img-responsive print-image") %></img> -->
       <p><%= product.description %></p>
     </div><!-- end .img-txt-bg -->
     <p class="price">$ <%= product.price %></p>
