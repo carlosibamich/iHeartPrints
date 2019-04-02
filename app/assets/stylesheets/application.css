@@ -227,17 +227,22 @@ form.search-form {
 
 /* ---------- Footer ---------- */
 .site-footer {
- height: 62px;
- margin-top: 3em;
- font-size: 22px;
- font-weight: 400;
- letter-spacing: .04em;
- border-top: 8px solid rgb(230,230,230);
- background-color: rgb(105,107,105);
+  height: 62px;
+ /*margin-top: 3em;*/
+  letter-spacing: .04em;
+  border-top: 8px solid rgb(230,230,230);
+  background-color: rgb(105,107,105);
 }
 .site-footer p {
  margin-top: 19px;
  margin-left: 24px;
  font-size: 17px;
+ font-weight: 200;
  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .site-footer {
+    font-weight: 400;
+  }
 }
