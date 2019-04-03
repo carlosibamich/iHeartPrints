@@ -5,9 +5,10 @@
       <h2><%= link_to product.name, product, class: "product-header2" %></h2>
       <img><%= link_to image_tag(product.img_url, class: "img-responsive print-image"), product %></img>
       <p><%= product.description %></p>
+      <p class="price">$ <%= product.price %></p>
     </section><!-- end .img-txt-bg -->
 
-    <p class="price">$ <%= product.price %></p>
+
 
     <br>
 
