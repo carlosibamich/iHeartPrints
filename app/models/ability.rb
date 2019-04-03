@@ -9,10 +9,10 @@ class Ability
     if user.admin?
       can :manage, :all
     else
-      can [:show, :edit, :update], User, id: user.id
-      can [:show, :index], Order, user_id: user.id
-      can :create, Comment, user_id: user.id
-      can [:show, :index], Product
+      can [:read, :update], User, id: user.id
+      can [:create, :read], Order, user_id: user.id
+      can :create, Comment
+      can :read, Product
     end
 
     # The first argument to `can` is the action you are giving the user

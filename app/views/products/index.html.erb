@@ -14,7 +14,9 @@
 
   <br>
 
-  <%= link_to 'New Product', new_product_path, :class => "new-product-link" %>
+  <% if signed_in? && current_user.admin? %>
+    <%= link_to 'New Product', new_product_path, :class => "new-product-link" %>
+  <% end %>
 
   <div class="bottom-space"></div>
 </div>
