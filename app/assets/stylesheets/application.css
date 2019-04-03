@@ -41,7 +41,7 @@ h2 {
 	margin-left: 0 !important;
 }
 .main-box {
- margin-top: 110px;
+ margin-top: 98px;
 }
 .art {
  color: rgb(255,173,153);
@@ -75,6 +75,9 @@ h2 {
 }
 
 @media screen and (min-width: 768px) {
+  .main-box {
+   margin-top: 106px;
+  }
   .alert,
   .notice {
     padding: 16px 44px;

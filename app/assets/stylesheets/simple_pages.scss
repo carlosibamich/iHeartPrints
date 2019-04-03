@@ -50,65 +50,24 @@
 }
 
 // **************** Home Page Styles (local) **************** //
-header {
-  h1 {
-    margin-bottom: 0;
-    font-size: 44px;
-    letter-spacing: .02em;
-    text-align: center;
-  }
-  p {
-    margin-top: .6em;
-    font-size: 22px;
-    text-align: center;
-    line-height: 1.2em;
-  }
-}
 
 .app-image {
   display: block;
   width: auto;
   height: 24em;
-  margin: 2em auto;
-  border: 18px solid rgb(230,230,230);
+  margin: 4.6em auto 0 auto;
+  border: 12px solid rgb(230,230,230);
   -webkit-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
    	 -moz-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
      	 -o-box-shadow: 2px 2px 4px rgba(0,0,0,.15);
 					box-shadow: 2px 2px 4px rgba(0,0,0,.15);
 }
 
-@media screen and (min-width: 768px) {
-  p {
-    font-size: 23px;
-  }
-}
-
 @media screen and (min-width: 992px) {
-  h1 {
-    font-size: 51px;
-  }
-  p {
-    font-size: 30px;
-  }
   .app-image {
-    margin-top: 4.4em;
+    margin-top: 7.5em;
   }
-  #vangogh {
-    padding-left: 0;
-  }
-  #millet {
-    padding-left: .1em;
-  }
-  #picasso {
-    padding-left: 2.1em;
-  }
-  #rothko {
-    padding-left: 3.4em;
-  }
-  #mona-lisa {
-    padding-left: 1.3em;
-  }
-}
+ }
 
 // ******************* About Page ***************** //
 .about-info {
