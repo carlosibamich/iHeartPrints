@@ -1,16 +1,17 @@
-<% if signed_in? %>
-  <!--<hr class="comments-border">-->
-  <p class="new-comment-header">Add a review:</p>
-  <%= form_for([@product, @product.comments.build]) do |f| %>
-    <p>
-      <%= f.text_area :body, placeholder: "Enter your comment here...", class: "form-control text-area" %>
-    </p>
-    <p>
-      <div class="rating"></div>
-    </p>
-    <p class="submit-button">
-      <%= f.submit "Submit", class: "submit-btn" %>
-    </p>
+<section class="container-fluid">
+  <% if signed_in? %>
+    <p class="new-comment-header">Add a review:</p>
+    <%= form_for([@product, @product.comments.build]) do |f| %>
+      <p>
+        <%= f.text_area :body, placeholder: "Enter your comment here...", class: "form-control text-area", rows: 4, required: "true" %>
+      </p>
+      <p>
+        <div class="rating"></div>
+      </p>
+      <p class="submit-button">
+        <%= f.submit "Submit", class: "submit-btn" %>
+      </p>
+    <% end %>
   <% end %>
-<% end %>
-<hr class="comments-border">
+  <hr class="comments-border">
+</section><!-- end .container-fluid -->
