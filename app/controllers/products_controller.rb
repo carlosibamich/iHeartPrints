@@ -8,22 +8,15 @@ class ProductsController < ApplicationController
     @products = Product.all
     @search_term = params[:q]
 
-    def find_product
-      if Rails.env.production?
-        @products = Product.search(@search_term)
-      end
-      @products = Product.look_for(@search_term)
-    end
-
     if Rails.env.production?
       if  @search_term
-        find_product
+        @products = Product.search(@search_term)
       else
         @products
       end
     else
       if @search_term
-        find_product
+        @products = Product.look_for(@search_term)
       else
         @products
       end
