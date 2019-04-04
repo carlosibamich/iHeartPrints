@@ -22,10 +22,12 @@
 html, body {
  height: 100%;
  margin: 0;
- padding: .2em !important;
  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
  color: rgb(249,249,249);
  background-color: rgb(130, 159, 163);
+}
+body {
+  padding: 6px 18px !important;
 }
 h2 {
   margin-bottom: 0 !important;

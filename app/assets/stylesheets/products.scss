@@ -25,90 +25,112 @@
   }
   p {
     margin-bottom: 0;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 26px;
   }
 }
 
 .records {
-  .center-data-div {
-    position: relative;
-    margin-top: 48px;
-    padding: 0 18px;
-  }
-  .product-header2 {
-    @include dropshadow;
-    // margin-top: 62px;
-    margin-left: 8px;
-    color: rgb(245, 156, 131);
-    font-size: 26px;
-  }
-  .img-txt-bg {
-    min-height: 580px;
-    max-width: 368px;
-    margin: 0 auto;
-    padding: 0 12px;
-  }
-  .print-image {
-    @include dropshadow;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
-    border: 10px solid rgb(230,230,230);
-  }
-  .print-image:hover {
-    border: 11px solid rgb(255,255,255);
-    -webkit-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
-     	 -moz-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
-       	 -o-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
-  					text-shadow: 5px 8px 15px rgba(0,0,0,.3);
-  }
-  p {
-    margin-top: 14px;
-    margin-bottom: 30px;
-    padding: 0 2px;
-    font-size: 1.12em;
-    text-align: left;
-    line-height: 1.75em;
-    letter-spacing: .4px;
-  }
-  .price {
-    @include dropshadow;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: 0 auto;
-    max-width: 305px;
-    height: 35px;
-    padding-top: 3px;
-    padding-right: 34px;
-    font-size: 16px;
-    background-color: rgba(240,240,240,.87);
-    color: rgb(252, 117, 84);
-    text-align: right;
-  }
-  /* crud-links only for admin */
-  .crud-links {
-    margin-top: 0;
-    margin-left: 6px;
-    font-size: 1.4em;
-    color: rgb(100,100,100);
-  }
-   @media screen and (min-width: 768px) {
-     .price {
-       max-width: 319px;
-       padding-right: 28px;
-       margin: 0 30px;
+  position: relative;
+    .gaps {
+      margin-top: 22px;
+    }
+    .center-data-div {
+      display: block;
+      min-height: 570px;
+      max-width: 368px;
+      margin: 0 auto;
+    }
+    .product-header2 {
+      @include dropshadow;
+      margin-left: 8px;
+      color: rgb(245, 156, 131);
+      font-size: 25px;
+    }
+    .img-txt-bg {
+      margin-top: 26px;
+    }
+    .print-image {
+      @include dropshadow;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto;
+      border: 10px solid rgb(230,230,230);
+    }
+    .print-image:hover {
+      border: 11px solid rgb(255,255,255);
+      -webkit-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+       	 -moz-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+         	 -o-text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+    					text-shadow: 5px 8px 15px rgba(0,0,0,.3);
+    }
+    .p-description {
+      margin-top: 14px;
+      margin-bottom: 15px;
+      padding: 0 2px;
+      font-size: 1.12em;
+      text-align: left;
+      line-height: 1.65em;
+      letter-spacing: .4px;
+    }
+    .price {
+      @include dropshadow;
+      max-width: 100%;
+      margin-right: 0;
+      padding: 7px 34px 7px 0;
+      font-size: 16px;
+      background-color: rgba(240,240,240,.87);
+      color: rgb(252, 117, 84);
+      text-align: right;
+    }
+    /* crud-links only for admin */
+    .crud-links {
+      margin-top: 18px;
+      margin-left: 12px;
+      font-size: 18px;
+      .link-word {
+        margin-right: 6px;
+        color: rgb(100,100,100);
+      }
+    }
+     @media screen and (min-width: 768px) {
+       .gaps {
+         margin-top: 38px;
+         padding: 0 2.8%;
+       }
+       .product-header2 {
+         margin-left: 6px;
+         font-size: 28px;
+       }
+      .img-txt-bg {
+        min-height: 640px;
+      }
+      .p-description {
+        line-height: 1.58em;
+      }
+       .price {
+         max-width: 319px;
+         padding-right: 28px;
+       }
      }
-   }
 
-   @media screen and (min-width: 992px) {
-     .price {
-       padding-right: 20px;
-       margin: 0 30px;
-     }
-  }
+     @media screen and (min-width: 992px) {
+       .gaps {
+         margin-top: 66px;
+         padding: 0 1.2%;
+       }
+       .product-header2 {
+         margin-left: 4px;
+         font-size: 24px;
+       }
+       .img-txt-bg {
+         min-height: 576px;
+         margin-top: 0;
+       }
+       .price {
+         padding-right: 20px;
+       }
+    }
 }
 /* new-product-link only for admin */
 .new-product-link {
