@@ -11,7 +11,7 @@ class Ability
     else
       can [:read, :update], User, id: user.id
       can [:create, :read], Order, user_id: user.id
-      can :create, Comment
+      can [:create, :read], Comment
       can :read, Product
     end
 

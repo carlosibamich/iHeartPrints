@@ -8,12 +8,13 @@ class Product < ApplicationRecord
   validates :img_url, presence: true
   validates :price, presence: true
 
-  def self.search(search_term)
+def self.find_products(search_term)
+  if Rails.env.production?
     Product.where("name ilike ? OR description ilike ?", "%#{search_term}%", "%#{search_term}%")
-  end
-  def self.look_for(search_term)
+  else
     Product.where("name LIKE ? OR description LIKE ?", "%#{search_term}%", "%#{search_term}%")
   end
+end
 
   def highest_rated_comment
     comments.rating_desc.first
