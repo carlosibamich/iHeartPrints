@@ -52,6 +52,8 @@ group :development, :test do
   gem 'sqlite3'
   # Use RSpec to conduct unit and functional tests before writing code that goes live
   gem 'rspec-rails', '~> 3.8.2'
+  # Use the following gem for functional tests via RSpec
+  gem 'rails-controller-testing'
 end
 
 group :development do
