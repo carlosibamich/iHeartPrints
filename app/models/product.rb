@@ -8,13 +8,13 @@ class Product < ApplicationRecord
   validates :img_url, presence: true
   validates :price, presence: true
 
-def self.find_products(search_term)
-  if Rails.env.production?
-    Product.where("name ilike ? OR description ilike ?", "%#{search_term}%", "%#{search_term}%")
-  else
-    Product.where("name LIKE ? OR description LIKE ?", "%#{search_term}%", "%#{search_term}%")
+  def self.find_products(search_term)
+    if Rails.env.production?
+      Product.where("name ilike ? OR description ilike ?", "%#{search_term}%", "%#{search_term}%")
+    else
+      Product.where("name LIKE ? OR description LIKE ?", "%#{search_term}%", "%#{search_term}%")
+    end
   end
-end
 
   def highest_rated_comment
     comments.rating_desc.first
@@ -29,7 +29,3 @@ end
   end
 
 end
-
-# Another way of passing parameters into .where query so that both SQLite3 and PostgreSQL understand it is by lower-casing all letters by hand using the following:
-
-# Product.where("lower(name) like lower(?) OR lower(description) like lower(?)", "%#{search_term}%", "%#{search_term}%")
