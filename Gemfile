@@ -54,6 +54,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.8.2'
   # Use the following gem for functional tests via RSpec
   gem 'rails-controller-testing'
+  # Create data factories while testing controller and model functions using FactoryBot
+  gem 'factory_bot_rails', '~> 4.0'
 end
 
 group :development do

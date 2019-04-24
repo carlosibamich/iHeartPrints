@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 describe UsersController, type: :controller do
-  let(:user1) { User.create!(first_name: "Mister", last_name: "Magoo", email: "magoo@email.com", password: "mistermagoo") }
-  let(:user2) { User.create!(first_name: "Leon", last_name: "Trotsky", email: "the.trotskerinno@email.com", password: "thetrotskerinno") }
+  let(:user1) { FactoryBot.create(:user) }
+  let(:user2) { FactoryBot.create(:user) }
+  let(:admin) { FactoryBot.create(:admin) }
 
   describe 'GET #show' do
     context 'when a user is logged in' do
@@ -26,6 +27,17 @@ describe UsersController, type: :controller do
       it 'redirects to home page' do
         get :show, params: { id: user1.id }
         expect(response).to redirect_to(root_path)
+      end
+    end
+
+    context "when an admin is signed in" do
+      before do
+        sign_in admin
+      end
+      it "has access to all user details" do
+        get :show, params: { id: user1.id }
+        get :show, params: { id: user2.id }
+        expect(response).to be_ok
       end
     end
   end

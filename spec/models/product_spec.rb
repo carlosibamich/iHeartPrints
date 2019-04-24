@@ -1,9 +1,9 @@
 require 'rails_helper'
 
-describe Product do
+describe Product, type: :model do
   context "when the product has comments" do
-    let(:product) { Product.create!( name: "Warhol", description: "Gold Marilyn", img_url: "andywarhol2.jpg", price: 18.85 ) }
-    let(:user) { User.create!(first_name: "Danny", last_name: "DeVito", email: "danny@email.com", password: "dannyboy" )}
+    let(:product) { FactoryBot.create(:product) }
+    let(:user) { FactoryBot.create(:user) }
 
     before do
       product.comments.create!( rating: 1, user: user, body: "Me no likey.")
