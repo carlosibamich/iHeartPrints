@@ -15,12 +15,18 @@
 
       <p class="show-text">
         <strong>Price:</strong>
-        <%= @product.price %>
+        <%= @product.price/100 %>
       </p>
 
       <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image" ) %></img>
 
       <p class="average-rating-block"><strong>Average rating:</strong>  <span class="rated" data-score="<%= @product.average_rating %>"></span></p>
+
+      <div class="pay-btn">
+        <%= form_with(url: '/payments/create') do |form| %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+      </div>
 
       <%= render 'comments' %>
 

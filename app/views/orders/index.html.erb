@@ -7,7 +7,7 @@
       </h1>
       <p class="orders-p"><%= order.product.description %></p>
       <img><%= image_tag(order.product.img_url, class: "img-responsive orders-image") %></img><br>
-      <strong class="orders-price">$ <%= order.product.price %></strong>
+      <strong class="orders-price">$ <%= order.product.price/100 %></strong>
     </div>
   <% end %>
 </div>
