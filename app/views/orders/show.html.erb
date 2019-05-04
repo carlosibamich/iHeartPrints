@@ -3,7 +3,7 @@
   <strong>Order ID: </strong><%= @order.id %>
   <strong>Product Name: </strong><%= @order.product.name %>
   <strong>Product Price: </strong><%= number_to_currency(@order.product.price/100) %>
-  <strong>Total Price (with shipping): </strong><%= number_to_currency(@order.total) %><br>
+  <strong>Total Price (with shipping): </strong><%= number_to_currency(@order.total/100 + 5) %><br>
   <img><%= image_tag(@order.product.img_url, class: "img-responsive orders-image" ) %></img>
   <br>
   <%= link_to 'Back', orders_path, class: "orders-back" %>
