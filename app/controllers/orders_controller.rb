@@ -12,12 +12,4 @@ class OrdersController < ApplicationController
     @order = Order.find(params[:id])
   end
 
-  # POST /orders
-  def create
-  end
-
-  # DELETE /orders/1
-  def destroy
-  end
-
 end

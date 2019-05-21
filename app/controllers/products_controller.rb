@@ -7,6 +7,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @products = Product.find_products(params[:q]) if params[:q]
+    logger.debug "This action always displays the list of products"
   end
 
   # GET /products/1
@@ -29,9 +30,11 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
+    logger.debug { "-- New product: #{@product.attributes.inspect} --" }
+    logger.debug { "-- Product should be valid: #{@product.valid?} --" }
     respond_to do |format|
       if @product.save
+        logger.debug { "-- Product was saved. A message will confirm the creation was a success and the admin will be redirected --" }
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
@@ -46,6 +49,7 @@ class ProductsController < ApplicationController
   def update
     respond_to do |format|
       if @product.update(product_params)
+        logger.debug { "-- The product was successfully updated. The admin will be redirected to the product show page --" }
         format.html { redirect_to @product, notice: 'Product was successfully updated.' }
         format.json { render :show, status: :ok, location: @product }
       else
@@ -59,6 +63,7 @@ class ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product.destroy
+    logger.debug { "-- Site will display a confirm box. Once product has been deleted admin will be redirected to products index page --" }
     respond_to do |format|
       format.html { redirect_to products_url, notice: 'Product was successfully destroyed.' }
       format.json { head :no_content }
