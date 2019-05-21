@@ -5,19 +5,23 @@
       <p id="notice"><%= notice %></p>
       <p class="show-text">
         <strong>Name:</strong>
+        <% logger.debug { "-- Product: #{@product.name} --" } %>
         <%= @product.name %>
       </p>
 
       <p class="show-text">
         <strong>Description:</strong>
+      <% logger.debug { "-- Description: #{@product.description} --" } %>
         <%= @product.description %>
       </p>
 
       <p class="show-text">
         <strong>Price:</strong>
+        <% logger.debug { "-- Price: #{@product.price/100} --" } %>
         <%= @product.price/100 %>
       </p>
 
+      <% logger.debug "Image: #{@product.img_url}" %>
       <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image" ) %></img>
 
       <p class="average-rating-block"><strong>Average rating:</strong>  <span class="rated" data-score="<%= @product.average_rating %>"></span></p>
