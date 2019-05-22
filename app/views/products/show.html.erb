@@ -22,7 +22,7 @@
       </p>
 
       <% logger.debug "Image: #{@product.img_url}" %>
-      <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image" ) %></img>
+      <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image img-zoom", data_zoom_image: @product.img_url) %></img>
 
       <p class="average-rating-block"><strong>Average rating:</strong>  <span class="rated" data-score="<%= @product.average_rating %>"></span></p>
 
