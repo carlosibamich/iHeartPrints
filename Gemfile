@@ -40,6 +40,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Gemfile for Rails 3+
 gem 'will_paginate', '~> 3.1.1'
 
+# Use Brakeman to scan through the Application to help find weaknesses in security
+gem 'brakeman', '~> 4.5.1'
+
 group :production do
   # Use pg to communicate with PostgreSQL databases
   gem 'pg'
