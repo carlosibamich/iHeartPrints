@@ -1,7 +1,7 @@
-<section class="container-fluid">
+<section class="container-fluid" id="new-comment-container">
   <% if signed_in? %>
     <p class="new-comment-header">Add a review:</p>
-    <%= form_for([@product, @product.comments.build]) do |f| %>
+    <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
       <p>
         <%= f.text_area :body, placeholder: "Enter your comment here...", class: "form-control text-area", rows: 4, required: "true" %>
       </p>
