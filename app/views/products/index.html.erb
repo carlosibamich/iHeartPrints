@@ -6,9 +6,11 @@
 </header>
 
 <div class="container-fluid">
-  <div class="row records">
-    <%= render @products %>
-  </div>
+  <% cache(cache_key_for_products) do %>
+    <div class="row records">
+      <%= render @products %>
+    </div>
+  <% end %>
 
   <br>
 

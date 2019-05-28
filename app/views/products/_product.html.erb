@@ -1,8 +1,5 @@
-<% logger.debug { "-- This app contains the following #{Product.count} products: --" } %>
-<% logger.debug { "-- Product: #{product.name} --" } %>
-
 <div class="col-12 col-md-6 col-lg-2 gaps">
-
+<% cache product do %>
   <div class="center-data-div">
     <section class="img-txt-bg">
       <h2><%= link_to product.name, product, class: "product-header2" %></h2>
@@ -22,5 +19,6 @@
       </span>
     <% end %>
   </div>
+<% end %>
 
 </div>
