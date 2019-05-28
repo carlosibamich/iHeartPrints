@@ -23,8 +23,6 @@ $(document).on('turbolinks:load ajaxSuccess', function() {
   noticeAlertBg.css("display", "inline-block");
   noticeAlert.delay(1500).fadeOut(800);
   noticeAlertBg.delay(2200).slideUp(800);
-
   refreshRating();
-
   $('.img-zoom').elevateZoom();
 });

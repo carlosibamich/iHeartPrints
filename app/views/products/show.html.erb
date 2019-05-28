@@ -3,28 +3,27 @@
   <div class="row">
     <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3">
       <p id="notice"><%= notice %></p>
-      <p class="show-text">
-        <strong>Name:</strong>
-        <% logger.debug { "-- Product: #{@product.name} --" } %>
-        <%= @product.name %>
-      </p>
 
-      <p class="show-text">
-        <strong>Description:</strong>
-      <% logger.debug { "-- Description: #{@product.description} --" } %>
-        <%= @product.description %>
-      </p>
+      <% cache @product do %>
+        <p class="show-text">
+          <strong>Name:</strong>
+          <%= @product.name %>
+        </p>
 
-      <p class="show-text">
-        <strong>Price:</strong>
-        <% logger.debug { "-- Price: #{@product.price/100} --" } %>
-        <%= @product.price/100 %>
-      </p>
+        <p class="show-text">
+          <strong>Description:</strong>
+          <%= @product.description %>
+        </p>
 
-      <% logger.debug { "-- Image: #{@product.img_url} --" } %>
-      <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image img-zoom", data_zoom_image: @product.img_url) %></img>
+        <p class="show-text">
+          <strong>Price:</strong>
+          <%= @product.price/100 %>
+        </p>
 
-      <p class="average-rating-block"><strong>Average rating:</strong> &nbsp;<span class="rated" data-score="<%= @product.average_rating %>" id="average-rating"></span></p>
+        <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image img-zoom", data_zoom_image: @product.img_url) %></img>
+
+        <p class="average-rating-block"><strong>Average rating:</strong> &nbsp;<span class="rated" data-score="<%= @product.average_rating %>" id="average-rating"></span></p>
+      <% end%>
 
       <div class="pay-btn">
         <%= form_with(url: '/payments/create') do |form| %>

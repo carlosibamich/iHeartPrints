@@ -43,6 +43,9 @@ gem 'will_paginate', '~> 3.1.1'
 # Use Brakeman to scan through the Application to help find weaknesses in security
 gem 'brakeman', '~> 4.5.1'
 
+# Use dalli gem to set up Rails app to start using Memcache
+gem 'dalli'
+
 group :production do
   # Use pg to communicate with PostgreSQL databases
   gem 'pg'
