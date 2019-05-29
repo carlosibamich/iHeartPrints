@@ -26,3 +26,92 @@ a.devise-links {
   font-size: 1.5em;
   color: rgb(96,96,96);
 }
+
+// ******************* Index Page ****************** //
+.user-head {
+  font-size: 22px;
+  text-align: center;
+}
+.user-count-line {
+  margin: -18px 20px 30px 20px;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(218,218,218);
+}
+.user-count {
+  font-size: 24px;
+  color: rgb(255,173,153);
+}
+.user-list {
+  display: block;
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 22px;
+  color: rgb(210,210,210);
+}
+.user-crud-links {
+  display: block;
+  margin: 8px;
+  font-size: 17px;
+}
+.new-user-link {
+  display: block;
+  width: 220px;
+  text-align: center;
+  margin: 12px auto 20px auto;
+  font-size: 22px;
+  color: rgb(110,110,110);
+}
+
+@media screen and (min-width: 768px) {
+  .user-head {
+    font-size: 30px;
+  }
+  .user-count-line {
+    margin-top: -22px;
+    margin-bottom: 60px;
+    font-size: 31px;
+  }
+  .user-count {
+    font-size: 34px;
+  }
+  .user-list {
+    margin-bottom: 32px;
+    font-size: 26px;
+  }
+  .user-crud-links {
+    font-size: 22px;
+  }
+  .new-user-link {
+    width: 220px;
+    margin: 40px auto 20px auto;
+    font-size: 26px;
+  }
+  .user-box {
+    width: 560px;
+    margin: 5px auto 0 auto !important;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .user-head {
+    font-size: 33px;
+  }
+  .user-count-line {
+    margin-top: -18px;
+    margin-bottom: 70px;
+    font-size: 34px;
+  }
+  .user-count {
+    font-size: 38px;
+  }
+  .new-user-link {
+    &:hover {
+      text-decoration: none;
+      color: rgba(255,173,153,.9);
+    }
+  }
+  .user-box {
+    width: 700px;
+  }
+}

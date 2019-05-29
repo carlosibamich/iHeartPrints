@@ -46,6 +46,9 @@ gem 'brakeman', '~> 4.5.1'
 # Use dalli gem to set up Rails app to start using Memcache
 gem 'dalli'
 
+gem 'redis'
+gem 'redis-rails'
+
 group :production do
   # Use pg to communicate with PostgreSQL databases
   gem 'pg'

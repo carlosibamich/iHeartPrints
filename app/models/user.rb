@@ -5,4 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :orders
   has_many :comments
+
+  after_save :clear_cache
+  def clear_cache
+    $redis.del "users"
+  end
 end
