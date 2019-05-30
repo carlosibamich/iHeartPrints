@@ -1,5 +1,5 @@
 
 $('#new-comment-container').html("Thank you for your review!").css('height','56px');
 $('.ajax-comment-response').prepend('<%= j render @comment %>');
-$('#average-rating').attr('data-score', "<%= @product.average_rating %>");
+$("#average-rating").attr("data-score", "<%= @product.average_rating %>");
 refreshRating();

@@ -7,7 +7,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @products = Product.find_products(params[:q]) if params[:q]
-    logger.debug "This action always displays the list of products"
+    logger.debug { "This action always displays the list of products" }
   end
 
   # GET /products/1
