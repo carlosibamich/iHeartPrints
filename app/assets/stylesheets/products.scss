@@ -226,6 +226,11 @@
 .footer-space {
   height: 86px;
 }
+.alert.alert-info {
+  background: none;
+  margin: 10px;
+  text-align: center;
+}
 
 @media screen and (min-width: 768px) {
   .show-text {
