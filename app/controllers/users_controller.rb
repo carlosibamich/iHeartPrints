@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  include UsersHelper
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:show, :index]
   load_and_authorize_resource
@@ -6,7 +7,9 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    # This helper (in users_helper.rb) fetches User.all and loads it to the view as json
+    fetch_users
+    @count = fetch_users.count
   end
 
   # GET /users/1

@@ -123,6 +123,7 @@ nav ul {
  margin-top: 4px;
 }
 .nav-item .nav-link {
+  position: relative;
  padding-top: 0;
  padding-left: .8em !important;
  font-size: 20px;
@@ -131,8 +132,11 @@ nav ul {
   -webkit-transition: color 300ms;
 }
 .nav-item .nav-link:hover {
- color: rgb(252, 135, 108) !important;
+ color: rgb(252,135,108) !important;
 }
+ .nav-link:active{
+   top: 1px;
+ }
 .navbar-light .navbar-toggler {
   margin-top: 8px;
   margin-bottom: 7px;
@@ -198,13 +202,15 @@ form.search-form {
   cursor: pointer;
   background-color: rgb(135,135,135);
 }
-
 /* ---- Navigation Bar (screen min-width 768px) ---- */
 @media screen and (min-width: 768px) {
   .navbar-brand {
     display: block;
     margin-left: 16px;
     font-size: 26px;
+  }
+  .brand-link {
+    text-decoration: none;
   }
   nav {
     min-height: 64px;
@@ -222,7 +228,6 @@ form.search-form {
     height: 26px;
   }
 }
-
 /* ---- Navigation Bar (screen min-width 992px) ---- */
 @media screen and (min-width: 992px) {
   form.search-form {

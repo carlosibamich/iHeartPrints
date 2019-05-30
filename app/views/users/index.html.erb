@@ -1,29 +1,35 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Users</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
-      <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<header class="user-head">
+  <h1>Users</h1>
+</header>
+<h3 class="user-count-line">There are currently <span class="user-count"><%= @count %></span> members on this site</h3>
+<div class="user-box">
+<div class="row">
+  <% @users.each do |user| %>
+  <section class="col-12 col-md-6 col-lg-6">
+    <article class="user-list">
+      <!-- Redis stores objects as strings. The following data will be loaded/returned as json in keeping with fetch_users logic -->
+      <%= user["first_name"] %>
+      <%= user["last_name"] %>
+      <br>
+      <span class="user-crud-links">
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Show', user %>
+        <%#= link_to 'Edit', edit_user_path(user) %>
+        <%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <% end %>
+      </span>
+    </article>
+  </section>
+  <br>
+  <% end %>
+</div>
+</div>
 
 <br>
 
-<%= link_to 'New User', new_user_path %>
+<% if signed_in? && current_user.admin? %>
+  <%= link_to 'Create New User', new_user_path, class: "new-user-link" %>
+<% end %>
+<%=  %>
+<div class="bottom-space"></div>
