@@ -20,9 +20,9 @@
         </p>
 
         <img><%= image_tag(@product.img_url, class: "img-responsive products-show-image img-zoom", data_zoom_image: @product.img_url) %></img>
+      <% end %>
 
-        <p class="average-rating-block" id="average-rating"><strong>Average rating:</strong>  <span class="rated average-rating" data-score="<%= @product.average_rating %>"></span></p>
-      <% end%>
+      <p class="average-rating-block" ><strong>Average rating:</strong>  <span class="rated" id="average-rating" data-score="<%= @product.average_rating %>"></span></p>
 
       <div class="pay-btn">
         <%= form_with(url: '/payments/create') do |form| %>
