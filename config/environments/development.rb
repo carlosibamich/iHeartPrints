@@ -28,6 +28,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # Tell Rails generator to only generate vanilla JavaScript files instead of CoffeeScript
+  config.app_generators.javascript_engine = :javascript
+
   # The following is included so that any dynamic links that show up inside emails from your development environment generate the right URLs.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
