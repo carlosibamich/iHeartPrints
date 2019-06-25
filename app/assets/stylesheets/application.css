@@ -112,11 +112,11 @@ h2 {
 nav {
   min-height: 60px;
 }
-.navbar-brand {
- display:none;
-}
 #nav-brand {
  color: rgb(140,140,140);
+}
+#nav-brand-link a:link{
+  text-decoration: none;
 }
 nav ul {
  padding-right: 30px;
@@ -124,10 +124,10 @@ nav ul {
 }
 .nav-item .nav-link {
   position: relative;
- padding-top: 0;
- padding-left: .8em !important;
- font-size: 20px;
- font-weight: 500;
+  padding-top: 0;
+  padding-left: .8em !important;
+  font-size: 20px;
+  font-weight: 500;
   transition: color 300ms;
   -webkit-transition: color 300ms;
 }
@@ -135,7 +135,7 @@ nav ul {
  color: rgb(252,135,108) !important;
 }
  .nav-link:active{
-   top: 1px;
+   top: 2px;
  }
 .navbar-light .navbar-toggler {
   margin-top: 8px;
