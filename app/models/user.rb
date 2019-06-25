@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :comments
 
   after_save :clear_cache
+
   def clear_cache
     $redis.del "users"
   end
