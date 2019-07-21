@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def index
     # This helper (in users_helper.rb) fetches User.all and loads it to the view as json
     fetch_users
+    @users = User.all
     @count = fetch_users.count
   end
 
