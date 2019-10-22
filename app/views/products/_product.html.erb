@@ -1,22 +1,22 @@
 <div class="col-12 col-md-6 col-lg-2 gaps">
-<% cache product do %>
-  <div class="center-data-div">
-    <section class="img-txt-bg">
-      <h2><%= link_to product.name, product, class: "product-header2" %></h2>
-      <img><%= link_to image_tag(product.img_url, class: "img-responsive print-image"), product %></img>
-      <p class="p-description"><%= product.description %></p>
-    </section><!-- end .img-txt-bg -->
-    <p class="price">$ <%= product.price/100 %></p>
-  </div>
+  <% cache product do %>
+    <div class="center-data-div">
+      <section class="img-txt-bg">
+        <h2><%= link_to product.name, product, class: "product-header2" %></h2>
+        <img><%= link_to image_tag(product.img_url, class: "img-responsive print-image"), product %></img>
+        <p class="p-description"><%= product.description %></p>
+      </section><!-- end .img-txt-bg -->
+      <p class="price">$ <%= product.price/100 %></p>
+    </div>
 
-  <div class="crud-links">
-    <% if signed_in? && current_user.admin? %>
-      <span>
-        <%= link_to 'Show', product, class: "link-word" %>
-        <%= link_to 'Edit', edit_product_path(product), class: "link-word" %>
-        <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-word" %>
-      </span>
-    <% end %>
-  </div>
-<% end %>
+    <div class="crud-links">
+      <% if signed_in? && current_user.admin? %>
+        <span>
+          <%= link_to 'Show', product, class: "link-word" %>
+          <%= link_to 'Edit', edit_product_path(product), class: "link-word" %>
+          <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "link-word" %>
+        </span>
+      <% end %>
+    </div>
+  <% end %>
 </div>

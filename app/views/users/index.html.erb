@@ -13,11 +13,11 @@
       <%= user["last_name"] %>
       <br>
       <span class="user-crud-links">
-      <% if signed_in? && current_user.admin? %>
-        <%= link_to 'Show', user_path(user["id"]) %>
-        <%= link_to 'Edit', edit_user_path(user["id"]) %>
-        <%= link_to 'Destroy', user_path(user["id"]), method: :delete, data: { confirm: 'Are you sure?' } %>
-      <% end %>
+        <% if signed_in? && current_user.admin? %>
+          <%= link_to 'Show', user_path(user["id"]) %>
+          <%= link_to 'Edit', edit_user_path(user["id"]) %>
+          <%= link_to 'Destroy', user_path(user["id"]), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </span>
     </article>
   </section>
